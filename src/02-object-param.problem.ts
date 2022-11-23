@@ -1,6 +1,11 @@
 import { expect, it } from "vitest";
 
-export const addTwoNumbers = (params) => {
+// to anotate types, either user type, interface
+type Parameter = {
+  first: number,
+  second: number
+}
+export const addTwoNumbers = (params: Parameter) => {
   return params.first + params.second;
 };
 
