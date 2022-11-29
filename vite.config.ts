@@ -1,4 +1,9 @@
+import { config } from "process";
 import { defineConfig } from "vite";
+
+interface Config {
+  test: Array<{include: Array<string>; setupFiles: Array<string>; passWithNoTests: boolean; teardownTimeout: number}>
+}
 
 export default defineConfig({
   test: {
@@ -7,4 +12,4 @@ export default defineConfig({
     passWithNoTests: true,
     teardownTimeout: 5000,
   },
-});
+},)
